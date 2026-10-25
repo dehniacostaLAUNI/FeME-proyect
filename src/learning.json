@@ -1,0 +1,403 @@
+{
+  "resources": [
+    {
+      "id": "guide",
+      "slug": "guia-publica",
+      "group": "guide",
+      "title": {
+        "es": "Guía de co-creación comunitaria",
+        "en": "Community co-creation guide"
+      },
+      "body": {
+        "es": "Cómo acercarse, escuchar, decidir y acompañar. Incluye la checklist explicada.",
+        "en": "How to approach, listen, decide and provide support. Includes the explained checklist."
+      }
+    },
+    {
+      "id": "project",
+      "slug": "proyecto",
+      "group": "section",
+      "section": "proyecto",
+      "title": {
+        "es": "El proyecto y la colaboración",
+        "en": "The project and the partnership"
+      },
+      "body": {
+        "es": "Propósito, participantes institucionales y decisiones compartidas.",
+        "en": "Purpose, institutional participants and shared decisions."
+      }
+    },
+    {
+      "id": "university",
+      "slug": "universidad",
+      "group": "section",
+      "section": "la-uni",
+      "title": {
+        "es": "La Uni e Ingeniería Ambiental",
+        "en": "La Uni and Environmental Engineering"
+      },
+      "body": {
+        "es": "La universidad, la coordinación y el papel del equipo estudiantil.",
+        "en": "The university, coordination and the role of the student team."
+      }
+    },
+    {
+      "id": "community",
+      "slug": "comunidad",
+      "group": "section",
+      "section": "colectiva",
+      "title": {
+        "es": "La comunidad como protagonista",
+        "en": "The community as the leading partner"
+      },
+      "body": {
+        "es": "Saberes, prioridades, participación y cuidado de la identidad.",
+        "en": "Knowledge, priorities, participation and care for identity."
+      }
+    },
+    {
+      "id": "workshops",
+      "slug": "ruta-talleres",
+      "group": "section",
+      "section": "talleres",
+      "title": {
+        "es": "Cómo elegir y articular los talleres",
+        "en": "Choosing and connecting the workshops"
+      },
+      "body": {
+        "es": "Cuándo usar cada taller y qué acuerdos produce.",
+        "en": "When to use each workshop and what agreements it produces."
+      }
+    },
+    {
+      "id": "system",
+      "slug": "sistema-solar",
+      "group": "section",
+      "section": "sistema",
+      "title": {
+        "es": "Comprender y cuidar el sistema solar",
+        "en": "Understanding and caring for the solar system"
+      },
+      "body": {
+        "es": "Componentes, necesidades presentes y criterios para crecer.",
+        "en": "Components, present needs and criteria for expansion."
+      }
+    },
+    {
+      "id": "evidence",
+      "slug": "evidencias",
+      "group": "section",
+      "section": "evidencias",
+      "title": {
+        "es": "Documentar y compartir con cuidado",
+        "en": "Documenting and sharing with care"
+      },
+      "body": {
+        "es": "Consentimiento, selección y revisión de evidencias públicas.",
+        "en": "Consent, selection and review of public evidence."
+      }
+    },
+    {
+      "id": "replication",
+      "slug": "plan-replica",
+      "group": "section",
+      "section": "replicar",
+      "title": {
+        "es": "Plan de adaptación y seguimiento",
+        "en": "Adaptation and follow-up plan"
+      },
+      "body": {
+        "es": "Fichas para acordar responsabilidades, revisar avances y adaptar la experiencia.",
+        "en": "Worksheets for agreeing responsibilities, reviewing progress and adapting the experience."
+      }
+    },
+    {
+      "id": "knowledge",
+      "slug": "taller-saberes",
+      "group": "workshop",
+      "title": {
+        "es": "Taller: saberes energéticos",
+        "en": "Workshop: energy knowledge"
+      },
+      "body": {
+        "es": "Escucha, mapas de actividades y prioridades de bienestar energético.",
+        "en": "Listening, activity maps and energy wellbeing priorities."
+      }
+    },
+    {
+      "id": "thermal",
+      "slug": "taller-solar-termica",
+      "group": "workshop",
+      "title": {
+        "es": "Taller: energía solar térmica",
+        "en": "Workshop: solar thermal energy"
+      },
+      "body": {
+        "es": "Cocción, conservación, observación del calor y ficha experimental.",
+        "en": "Cooking, preservation, observing heat and an experiment worksheet."
+      }
+    },
+    {
+      "id": "photovoltaic",
+      "slug": "taller-fotovoltaica",
+      "group": "workshop",
+      "title": {
+        "es": "Taller: sistemas fotovoltaicos",
+        "en": "Workshop: photovoltaic systems"
+      },
+      "body": {
+        "es": "Recorrido de la electricidad, inventario de cargas y cuidados.",
+        "en": "The electricity pathway, load inventory and maintenance."
+      }
+    }
+  ],
+  "phases": [
+    {
+      "title": {
+        "es": "Acercarse por invitación y acordar el encuentro",
+        "en": "Approach through invitation and agree the encounter"
+      },
+      "purpose": {
+        "es": "Construir una relación en la que la comunidad pueda aceptar, cambiar o rechazar la propuesta antes de comprometer tiempo o recursos.",
+        "en": "Build a relationship in which the community can accept, change or decline the proposal before committing time or resources."
+      },
+      "actions": {
+        "es": "Busca un contacto de confianza elegido por la comunidad. Presenta quién eres, quién financia el trabajo, qué puedes ofrecer, los límites del presupuesto y cuánto tiempo puedes acompañar. Pregunta quiénes deben participar y quiénes suelen quedar fuera. Acuerda idioma, horarios, accesibilidad, traslados, cuidados y una forma privada de contacto.",
+        "en": "Work with a trusted contact chosen by the community. Explain who you are, who funds the work, what you can offer, the budget limits and how long you can provide support. Ask who should participate and who is often left out. Agree language, timing, accessibility, travel, care arrangements and a private contact channel."
+      },
+      "questions": {
+        "es": "¿Quién nos invita y a quién más debemos escuchar? ¿Qué esperan del encuentro? ¿Qué no quieren que hagamos o publiquemos? ¿Cómo pueden detener o cambiar el proceso?",
+        "en": "Who is inviting us and who else should we hear? What do people expect from the encounter? What do they not want us to do or publish? How can they stop or change the process?"
+      },
+      "output": {
+        "es": "Un acuerdo de entrada sencillo: propósito provisional, participantes por función, tiempos, límites, decisiones que corresponden a la comunidad y reglas para registrar información. No requiere una lista pública de nombres.",
+        "en": "A simple entry agreement: provisional purpose, participant roles, timing, limits, decisions belonging to the community and rules for recording information. It does not need a public list of names."
+      },
+      "gate": {
+        "es": "Continuar cuando haya una invitación aceptada y condiciones reales para participar. Si falta una voz o el momento no conviene, ajustar la convocatoria o posponer. No comenzar con una compra o una tecnología ya decidida.",
+        "en": "Continue when there is an accepted invitation and realistic conditions for participation. If a voice is missing or the timing is unsuitable, adjust the invitation or postpone. Do not begin with a purchase or a technology already decided."
+      }
+    },
+    {
+      "title": {
+        "es": "Escuchar la vida cotidiana y priorizar juntas",
+        "en": "Listen to everyday life and set priorities together"
+      },
+      "purpose": {
+        "es": "Comprender qué servicio y qué bienestar se busca, antes de traducir la necesidad a paneles, focos o baterías.",
+        "en": "Understand the service and wellbeing people seek before translating needs into panels, lamps or batteries."
+      },
+      "actions": {
+        "es": "Recorre las actividades de un día con relatos voluntarios, dibujos y tarjetas. Pregunta por energía, seguridad, aprendizaje, agua, cocina y tareas de cuidado. Facilita grupos pequeños y formas de opinar sin exposición. Usa el taller de saberes energéticos para construir un mapa esquemático y priorizar. Distingue necesidades compartidas, diferencias y urgencias. Devuelve la síntesis para que la comunidad la corrija.",
+        "en": "Explore daily activities through voluntary accounts, drawings and cards. Ask about energy, safety, learning, water, cooking and care work. Offer small groups and ways to contribute without public exposure. Use the energy knowledge workshop to create a schematic map and set priorities. Distinguish shared needs, differences and urgent issues. Return the summary for the community to correct."
+      },
+      "questions": {
+        "es": "¿Qué actividad no puede realizarse hoy y a quién afecta? ¿Qué significaría sentirse más segura o tener más tiempo? ¿Quién asumiría nuevos trabajos? ¿Qué problemas requieren otro acompañamiento?",
+        "en": "Which activity cannot happen today and who is affected? What would feeling safer or having more time mean? Who would take on extra work? Which issues require another kind of support?"
+      },
+      "output": {
+        "es": "Tres prioridades justificadas en términos de servicios, sus horarios y quiénes se benefician. Conservar los desacuerdos y las dudas. Si surgen asuntos sobre uso del espacio, permisos o conflictos, derivarlos a acompañamiento competente y revisar si permiten avanzar.",
+        "en": "Three priorities justified in terms of services, their timing and who benefits. Keep disagreements and open questions visible. If use of the space, permissions or disputes arise, refer them to appropriate support and review whether work can proceed."
+      },
+      "gate": {
+        "es": "Continuar cuando la síntesis represente a las personas participantes y las condiciones pendientes estén identificadas. No pedir relatos de violencia ni datos del domicilio para demostrar una necesidad.",
+        "en": "Continue when the summary represents participants and unresolved conditions have been identified. Do not request accounts of violence or home addresses to establish a need."
+      }
+    },
+    {
+      "title": {
+        "es": "Comparar opciones y co-diseñar una prueba",
+        "en": "Compare options and co-design a trial"
+      },
+      "purpose": {
+        "es": "Elegir con la comunidad una respuesta viable, incluyendo mejorar hábitos, reparar, combinar soluciones o no instalar todavía.",
+        "en": "Choose a feasible response with the community, including changing practices, repairing, combining solutions or postponing installation."
+      },
+      "actions": {
+        "es": "Convierte cada prioridad en criterios: servicio esperado, costo total, tiempo de cuidado, clima, materiales disponibles y posibilidad de reparación. Compara al menos dos opciones con dibujos o modelos sencillos. Elige los talleres térmico o fotovoltaico sólo si ayudan a resolver preguntas del grupo. Pide revisión técnica para cargas, estructura, protecciones y compatibilidad. Acuerda una prueba pequeña, qué observarán y cuándo decidirán.",
+        "en": "Turn each priority into criteria: expected service, total cost, care time, climate, available materials and repairability. Compare at least two options using drawings or simple models. Choose the thermal or photovoltaic workshop only when it helps answer the group's questions. Obtain technical review of loads, structure, protection and compatibility. Agree a small trial, what to observe and when to decide."
+      },
+      "questions": {
+        "es": "¿Por qué preferimos esta opción? ¿Qué pasa con mal tiempo o si alguien deja de participar? ¿Qué costo y tarea de cuidado no se ve en el precio inicial? ¿Qué resultado nos haría cambiar de idea?",
+        "en": "Why do we prefer this option? What happens in poor weather or if someone leaves? Which costs and care tasks are missing from the initial price? What result would make us change our minds?"
+      },
+      "output": {
+        "es": "Una comparación de opciones y un acuerdo de prueba: servicio, límites, presupuesto, responsable por función, observaciones y fecha de revisión. Registrar por qué se elige o se descarta cada opción.",
+        "en": "An option comparison and a trial agreement: service, limits, budget, responsible roles, observations and review date. Record why each option is chosen or rejected."
+      },
+      "gate": {
+        "es": "Continuar cuando la comunidad elija con información comprensible y exista viabilidad técnica y del espacio. Si falta respaldo para el uso del lugar o la prueba falla, revisar antes de invertir o instalar.",
+        "en": "Continue when the community makes an informed, understandable choice and the technology and space are suitable. If support for use of the space is missing or the trial fails, review before investing or installing."
+      }
+    },
+    {
+      "title": {
+        "es": "Poner en práctica, aprender y entregar juntas",
+        "en": "Put decisions into practice, learn and hand over together"
+      },
+      "purpose": {
+        "es": "Que las personas comprendan el servicio, sus límites y los cuidados; que la entrega incluya responsabilidades y apoyo real.",
+        "en": "Ensure people understand the service, its limits and its care needs, with real responsibilities and support at handover."
+      },
+      "actions": {
+        "es": "Antes de la intervención, confirma acuerdos de uso del espacio y responsabilidades, con asesoría competente cuando haga falta. La instalación y las pruebas eléctricas corresponden a personal calificado. Combina demostración con explicación por las propias participantes: qué hace cada parte, qué pueden revisar visualmente y cuándo deben pedir apoyo. Entrega manuales, garantías, inventario y un protocolo sencillo de fallas. Presupuesta mantenimiento y reemplazos.",
+        "en": "Before intervention, confirm agreements for use of the space and responsibilities, with competent advice where needed. Qualified personnel must carry out installation and electrical tests. Combine demonstration with participants explaining in their own words what each part does, what they can inspect visually and when to request help. Hand over manuals, warranties, an inventory and a simple fault protocol. Budget for maintenance and replacements."
+      },
+      "questions": {
+        "es": "¿Podemos explicar los límites sin depender de quien instaló? ¿Quién atiende una falla, en qué plazo y con qué recursos? ¿Cómo se reparten los cuidados sin sobrecargar a las mismas personas?",
+        "en": "Can we explain the limits without relying on the installer? Who responds to a fault, within what timeframe and using what resources? How do we share care without overburdening the same people?"
+      },
+      "output": {
+        "es": "Una entrega acordada: pruebas técnicas registradas, explicación práctica, turnos de cuidado, canal privado de ayuda y fecha de primera revisión. Separar los registros técnicos privados de las evidencias públicas autorizadas.",
+        "en": "An agreed handover: recorded technical tests, practical explanation, care rota, private support channel and first review date. Separate private technical records from authorised public evidence."
+      },
+      "gate": {
+        "es": "No considerar terminada la entrega sólo porque el equipo enciende. Si no existe atención de fallas o el uso no se comprende, completar capacitación y apoyo antes de dar por cerrada esta fase.",
+        "en": "Do not regard handover as complete just because equipment turns on. If fault response is missing or use is unclear, complete training and support before closing this phase."
+      }
+    },
+    {
+      "title": {
+        "es": "Acompañar, evaluar y sostener la red",
+        "en": "Provide follow-up, evaluate and sustain the network"
+      },
+      "purpose": {
+        "es": "Cuidar la continuidad más allá de un taller, una visita o la titulación del equipo estudiantil.",
+        "en": "Care for continuity beyond a workshop, a visit or the student team's graduation."
+      },
+      "actions": {
+        "es": "Acuerda revisiones adaptables, por ejemplo al primer mes, a los tres meses y al año. Evalúa los servicios que la comunidad eligió: horarios de iluminación, acceso al aprendizaje, tiempo de cuidado o continuidad de actividades. Pregunta también por nuevas cargas y problemas. Si cambia el equipo universitario, acuerda un relevo antes de salir y confirma su capacidad de respuesta. Incluye intercambios entre experiencias y devuelve cada resultado a la comunidad antes de difundirlo.",
+        "en": "Agree adaptable reviews, for example after one month, three months and one year. Evaluate services chosen by the community: lighting hours, access to learning, care time or continuity of activities. Ask about new burdens and problems too. If the university team changes, agree a handover before leaving and confirm the replacement team's response capacity. Include exchanges between initiatives and return every result to the community before publication."
+      },
+      "questions": {
+        "es": "¿Mejoró lo que nos importaba? ¿Quién se beneficia y quién trabaja más? ¿Qué debemos reparar o cambiar? ¿Quién seguirá respondiendo y cómo lo sabremos? ¿Qué aprendizaje vale la pena compartir?",
+        "en": "Has what mattered to us improved? Who benefits and who does more work? What should we repair or change? Who will keep responding and how will we know? Which learning is worth sharing?"
+      },
+      "output": {
+        "es": "Una revisión conjunta con cambios acordados, una persona o institución responsable por función, recursos disponibles y próxima fecha. Conservar contactos en privado. La red puede continuar con egresadas y aliados cuando haya acuerdos concretos.",
+        "en": "A joint review with agreed changes, a responsible person or institution by role, available resources and the next date. Keep contacts private. Graduates and partners can sustain the network when concrete agreements are in place."
+      },
+      "gate": {
+        "es": "Cerrar cada ciclo con devolución y próximos pasos aceptados. No prometer acompañamiento ilimitado: explicar lo que sí puede sostenerse y acordar alternativas antes de terminar una colaboración.",
+        "en": "Close each cycle with feedback and accepted next steps. Do not promise unlimited support: explain what can actually be sustained and agree alternatives before a partnership ends."
+      }
+    }
+  ],
+  "checklist": [
+    {
+      "title": {
+        "es": "La comunidad definió sus prioridades y acuerdos.",
+        "en": "The community defined its priorities and agreements."
+      },
+      "why": {
+        "es": "Evita confundir la propuesta de una institución con una decisión de la comunidad.",
+        "en": "Prevents an institution's proposal being confused with a community decision."
+      },
+      "how": {
+        "es": "Devuelve la síntesis en lenguaje cotidiano y revísala con distintas voces. Pregunta quién falta, qué desacuerdos siguen abiertos y cómo se decide. Registra el servicio esperado y la posibilidad de cambiar o rechazar la propuesta.",
+        "en": "Return the summary in everyday language and review it with different voices. Ask who is missing, which disagreements remain and how decisions are made. Record the expected service and the ability to change or decline the proposal."
+      },
+      "evidence": {
+        "es": "Acta breve o dibujo validado: tres prioridades, criterios de elección, método de decisión y próxima revisión. Sin nombres ni ubicación en la copia pública.",
+        "en": "A short validated record or drawing: three priorities, choice criteria, decision method and next review. No names or location in the public copy."
+      },
+      "ready": {
+        "es": "Marcar cuando las participantes reconocen sus prioridades y aceptan los acuerdos; si hay exclusiones o desacuerdos pendientes que afectan la decisión, volver a escuchar.",
+        "en": "Check when participants recognise their priorities and accept the agreements; if exclusions or unresolved disagreements affect the decision, return to listening."
+      }
+    },
+    {
+      "title": {
+        "es": "Los materiales responden al clima y a los recursos locales.",
+        "en": "Materials suit local weather and resources."
+      },
+      "why": {
+        "es": "La misma tecnología o dinámica no funciona igual en todos los territorios.",
+        "en": "The same technology or activity does not work equally well everywhere."
+      },
+      "how": {
+        "es": "Revisa idioma, alfabetización, accesibilidad, tiempos, cuidados, disponibilidad de sol y materiales reparables localmente. Prueba una actividad pequeña. Contrasta expectativas con condiciones reales; prepara una alternativa para lluvia o falta de equipo.",
+        "en": "Review language, literacy, accessibility, timing, care work, sunlight and locally repairable materials. Try a small activity. Compare expectations with actual conditions; prepare an alternative for rain or missing equipment."
+      },
+      "evidence": {
+        "es": "Ficha de adaptación: qué se cambió, por qué, quién lo acordó por función y qué mostró la prueba. En temas técnicos, añadir revisión competente.",
+        "en": "An adaptation sheet: what changed, why, which roles agreed and what the trial showed. Add competent review for technical matters."
+      },
+      "ready": {
+        "es": "Marcar cuando la prueba es comprensible y viable con recursos disponibles. Si depende de insumos inaccesibles, cambiar materiales o alcance antes de repetirla.",
+        "en": "Check when the trial is understandable and feasible with available resources. If it relies on inaccessible supplies, change materials or scope before repeating it."
+      }
+    },
+    {
+      "title": {
+        "es": "Hay acompañamiento técnico y un plan de cuidados.",
+        "en": "Technical support and a maintenance plan are in place."
+      },
+      "why": {
+        "es": "Un equipo sin mantenimiento ni respuesta a fallas puede convertirse en una nueva carga.",
+        "en": "Equipment without maintenance or fault response can become a new burden."
+      },
+      "how": {
+        "es": "Acordar tareas, turnos, costos, garantías, reparación y relevo de responsables. Confirmar quién atenderá fallas y qué acciones requieren personal calificado. Revisar condiciones de uso del espacio antes de invertir. Mantener la agenda de contactos fuera de publicaciones.",
+        "en": "Agree tasks, rota, costs, warranties, repair and succession. Confirm who will respond to faults and which actions require qualified personnel. Review conditions for use of the space before investing. Keep the contact list out of publications."
+      },
+      "evidence": {
+        "es": "Plan con tarea, frecuencia, rol responsable, respaldo técnico, recurso previsto y revisión. Manuales y pruebas quedan disponibles para las personas usuarias.",
+        "en": "A plan with task, frequency, responsible role, technical backup, planned resources and review. Manuals and test records remain available to users."
+      },
+      "ready": {
+        "es": "Marcar cuando hay aceptación de responsabilidades y apoyo comprobable. Si no existe respuesta a fallas o recursos mínimos, ajustar el alcance y no declarar una entrega completa.",
+        "en": "Check when responsibilities are accepted and support is confirmed. If fault response or minimum resources are missing, adjust scope and do not declare a completed handover."
+      }
+    },
+    {
+      "title": {
+        "es": "Cada evidencia tiene consentimiento y protege datos personales.",
+        "en": "Every record has consent and protects personal data."
+      },
+      "why": {
+        "es": "Participar no equivale a aceptar fotografías, grabaciones o publicación en internet.",
+        "en": "Participation does not imply consent to photographs, recordings or internet publication."
+      },
+      "how": {
+        "es": "Explicar para qué se documenta, quién verá el material y dónde se publicará. Separar permisos para tomar, conservar y publicar. Ofrecer participar sin aparecer. Revisar rostros, voces, placas, mapas, metadatos y fondos. La autorización del video corresponde a ese video; no autoriza todos los archivos.",
+        "en": "Explain the recording purpose, audience and publication destination. Separate permission to record, keep and publish. Offer participation without appearing. Review faces, voices, signs, maps, metadata and backgrounds. Authorisation for the video applies to that video; it does not authorise every file."
+      },
+      "evidence": {
+        "es": "Registro privado de permisos por archivo y revisión de la versión final. Publicar sólo la selección autorizada, con nombres de archivo neutros y metadatos revisados.",
+        "en": "A private permission record per file and review of the final version. Publish only the authorised selection, using neutral filenames and reviewed metadata."
+      },
+      "ready": {
+        "es": "Marcar cuando cada archivo seleccionado tiene permiso para ese destino y se revisó su contenido. Si falta permiso, no publicarlo. Explicar que una copia ya descargada o el historial público pueden impedir un retiro total.",
+        "en": "Check when every selected file has permission for that destination and its content has been reviewed. Do not publish without permission. Explain that downloaded copies or public history may prevent complete withdrawal."
+      }
+    },
+    {
+      "title": {
+        "es": "El aprendizaje se evaluará con la comunidad.",
+        "en": "Learning will be evaluated with the community."
+      },
+      "why": {
+        "es": "Medir sólo equipos, visitas o watts no muestra si mejoró la vida cotidiana ni si el conocimiento puede usarse.",
+        "en": "Counting equipment, visits or watts alone does not show whether everyday life improved or knowledge can be used."
+      },
+      "how": {
+        "es": "Elige con la comunidad dos o tres cambios observables y cómo describir la situación inicial sin recopilar datos innecesarios. Pide explicar o demostrar un aprendizaje. Agenda la devolución y pregunta también qué no funcionó y quién asumió más trabajo.",
+        "en": "Choose two or three observable changes with the community and describe the starting situation without collecting unnecessary data. Ask people to explain or demonstrate a learning. Schedule feedback and ask what failed and who took on extra work."
+      },
+      "evidence": {
+        "es": "Una ficha con cambio esperado, observación inicial, forma de revisión, rol responsable, fecha y decisión posterior. Documentar las correcciones que pidió la comunidad.",
+        "en": "A sheet with expected change, initial observation, review method, responsible role, date and subsequent decision. Record corrections requested by the community."
+      },
+      "ready": {
+        "es": "Marcar cuando existen criterios aceptados y una revisión concertada, no sólo una encuesta al final. Si nadie puede devolver los resultados o dar seguimiento, acordar un relevo o reducir el alcance.",
+        "en": "Check when agreed criteria and a scheduled review exist, rather than only an end-of-session survey. If nobody can return results or follow up, agree a replacement or reduce scope."
+      }
+    }
+  ],
+  "external": {
+    "thermal": "https://view.genially.com/6a4401cf5ce4e8c6963d39db/interactive-content-energia-solar",
+    "photovoltaic": "https://view.genially.com/6a43fd76f47ae1721b3c0fbc/presentation-sistemas-autonomos-fotovoltaicos",
+    "femeProject": "https://feme.ac.uk/3504-2/"
+  }
+}

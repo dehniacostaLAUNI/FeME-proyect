@@ -1,5 +1,6 @@
 import {readdir,readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 const root=path.resolve(import.meta.dirname,'..');
 const problems=[];
 async function files(dir){let result=[];for(const e of await readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isSymbolicLink()){problems.push('No se admiten enlaces simbólicos: '+path.relative(root,p));continue}result.push(...(e.isDirectory()?await files(p):[p]))}return result}
@@ -16,9 +17,24 @@ for(const item of catalog.items||[]){
  try{await stat(path.join(root,'public',item.file.slice(1)))}catch{problems.push('Archivo de evidencia no encontrado: '+item.id)}
 }
 const expectedAssets=new Set(['public/assets/launi-coordination.webp','public/assets/launi-student-life.webp','public/assets/launi-environmental-team.webp','public/assets/launi-learning-community.webp','public/assets/launi-project-presentation.webp','public/assets/launi-team-identity.webp','public/assets/launi.png','public/assets/feme.png','public/assets/guia-publica-es.pdf','public/assets/guia-publica-en.pdf','public/assets/fonts/DMSans[opsz,wght].ttf','public/assets/fonts/DMSerifDisplay-Regular.ttf','public/assets/fonts/DMSerifDisplay-Italic.ttf','public/assets/fonts/Caveat[wght].ttf','public/assets/fonts/dmsans-OFL.txt','public/assets/fonts/dmserifdisplay-OFL.txt','public/assets/fonts/caveat-OFL.txt','public/favicon.svg','public/_headers','public/404.html','public/data/catalogo.json']);
+const learning=JSON.parse(await readFile(path.join(root,'src/learning.json'),'utf8'));
+const pdfHashes=new Set(),pdfPaths=new Set();
+for(const resource of learning.resources)for(const lang of ['es','en']){
+ const file='public/assets/'+resource.slug+'-'+lang+'.pdf';
+ if(pdfPaths.has(file))problems.push('Dos descargas apuntan al mismo PDF: '+file);
+ pdfPaths.add(file);expectedAssets.add(file);
+ try{const bytes=await readFile(path.join(root,file));if(!bytes.subarray(0,5).equals(Buffer.from('%PDF-')))problems.push('Descarga sin formato PDF: '+file);const hash=createHash('sha256').update(bytes).digest('hex');if(pdfHashes.has(hash))problems.push('PDF repetido: '+file);pdfHashes.add(hash)}catch{problems.push('Falta el PDF: '+file)}
+}
+if(pdfPaths.size!==22)problems.push('Faltan cuadernos por sección, taller o idioma.');
+for(const file of ['project-subtitled.mp4','subtitles-en.vtt','solar-system-projection.png'])expectedAssets.add('public/assets/'+file);
+const mediaManifest=JSON.parse(await readFile(path.join(root,'scripts/reviewed-media.json'),'utf8'));
+for(const [file,hash] of Object.entries(mediaManifest)){
+ const actual=createHash('sha256').update(await readFile(path.join(root,'public/assets',file))).digest('hex');
+ if(actual!==hash)problems.push('El video o los subtítulos cambiaron; revisar autorización y metadatos.');
+}
 for(const required of expectedAssets)try{await stat(path.join(root,required))}catch{problems.push('Falta un recurso necesario: '+required)}
 for(const file of await files(path.join(root,'public'))){const relative=path.relative(root,file).replaceAll('\\','/');if(!expectedAssets.has(relative)&&!approved.has(relative))problems.push('Archivo público fuera de la lista revisada: '+relative);const b=await readFile(file);if(b.length>25*1024*1024)problems.push('Archivo demasiado grande: '+relative);if(relative.endsWith('.webp')&&(b.includes(Buffer.from('EXIF'))||b.includes(Buffer.from('XMP '))))problems.push('Hay metadatos en una imagen: '+relative);if(relative.endsWith('.svg')&&/(?:https?:|<script|<foreignObject|onload=)/i.test(b.toString('utf8').replace('http://www.w3.org/2000/svg','')))problems.push('SVG con contenido externo o activo: '+relative)}
-for(const file of await files(path.join(root,'src'))){const source=await readFile(file,'utf8');if(/<iframe\b|<video\b|<audio\b|navigator\.(?:geolocation|mediaDevices|sendBeacon)|document\.cookie|RTCPeerConnection|WebSocket|dangerouslySetInnerHTML|https?:\/\/fonts\./i.test(source))problems.push('Conexión o función no permitida en '+path.relative(root,file));if(file.endsWith('.css')&&/https?:\/\//i.test(source))problems.push('CSS con recursos remotos.');for(const m of source.matchAll(/fetch\s*\(\s*(['"])(.*?)\1/g))if(m[2]!=='/data/catalogo.json')problems.push('Solicitud no permitida: '+m[2])}
+for(const file of await files(path.join(root,'src'))){const source=await readFile(file,'utf8');if(/<iframe\b|<audio\b|navigator\.(?:geolocation|mediaDevices|sendBeacon)|document\.cookie|RTCPeerConnection|WebSocket|dangerouslySetInnerHTML|https?:\/\/fonts\./i.test(source))problems.push('Conexión o función no permitida en '+path.relative(root,file));if(/<video\b/i.test(source)&&path.basename(file)!=='media.tsx')problems.push('Reproductor no revisado.');if(path.basename(file)==='media.tsx'&&(/<video\b[^>]*\bautoplay\b|<iframe|https?:\/\//i.test(source)||!source.includes('preload="none"')||!source.includes("publicUrl('/assets/project-subtitled.mp4')")))problems.push('El video debe ser local y sin reproducción automática.');if(file.endsWith('.css')&&/https?:\/\//i.test(source))problems.push('CSS con recursos remotos.');for(const m of source.matchAll(/fetch\s*\(\s*(['"])(.*?)\1/g))if(m[2]!=='/data/catalogo.json')problems.push('Solicitud no permitida: '+m[2])}
 for(const entry of await readdir(root))if(/^\.env(?:\.|$)|\.(pem|key)$/i.test(entry))problems.push('No se permite material de acceso en esta carpeta: '+entry);
 if(problems.length){console.error(problems.join('\n'));process.exit(1)}
 console.log('Revisión automática: archivos permitidos, catálogo revisado y sin conexiones externas automáticas. La revisión de rostros y contexto sigue siendo humana.');
