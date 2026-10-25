@@ -3,19 +3,22 @@ on:
   workflow_dispatch:
     inputs:
       reviewed:
-        description: He revisado textos, archivos, imágenes y ausencia de datos identificables
+        description: He revisado textos, archivos, permisos de imagen y ausencia de datos sensibles
         type: boolean
         required: true
         default: false
 permissions:
   contents: read
 concurrency:
-  group: public-release
+  group: pages
   cancel-in-progress: false
 jobs:
-  publish:
-    if: ${{ github.event.inputs.reviewed == 'true' && github.ref == 'refs/heads/main' }}
+  build:
+    if: ${{ inputs.reviewed && github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -23,16 +26,24 @@ jobs:
           node-version: '22'
       - run: npm install --global pnpm@11.25.0
       - run: pnpm install --frozen-lockfile --ignore-scripts
+      - uses: actions/configure-pages@v5
       - run: pnpm run build
-      - name: Preparar alojamiento
-        run: node scripts/ensure-project.mjs
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT }}
-      - name: Publicar únicamente dist
-        run: npx --yes wrangler@4.92.0 pages deploy dist --project-name "$CF_PAGES_PROJECT" --branch production --commit-message "Reviewed public release"
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          CF_PAGES_PROJECT: ${{ vars.CF_PAGES_PROJECT }}
+          SITE_BASE: /FeME-proyect/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar la versión revisada
+        id: deployment
+        uses: actions/deploy-pages@v4

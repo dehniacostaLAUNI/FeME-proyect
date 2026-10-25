@@ -1,6 +1,8 @@
 # Saberes energéticos · La Uni × FeME
 
-Edición bilingüe de aprendizaje comunitario, preparada para un repositorio **privado** y alojamiento público de archivos estáticos en Cloudflare Pages. La versión completa con registros originales permanece separada.
+Micrositio bilingüe de aprendizaje comunitario, talleres solares y réplica de experiencias. Coordinación académica: Dra. Luz Dehni Acosta Moyado. Universidades La Uni, Ingeniería Ambiental, en colaboración con FeME.
+
+Edición para **GitHub Pages** con código público. Contiene materiales seleccionados para difusión. Los registros originales y la administración de evidencias permanecen separados; no se incluyen aquí.
 
 ## Trabajar en el sitio
 
@@ -13,34 +15,37 @@ pnpm run build
 pnpm run preview
 ```
 
-`dist` es el único directorio que se publica. No subir el directorio de trabajo completo, `.git`, `node_modules`, originales o credenciales al alojamiento. La guía de administración en PDF está en `administracion` y no forma parte del sitio público.
+La ruta base es `/FeME-proyect/`. Para otro repositorio o dominio, ajustar `SITE_BASE` y el flujo. `dist` es el único directorio que se publica como web. No subir originales, credenciales, `.git` o `node_modules` al alojamiento.
 
-## Publicación revisada
+## Publicar una versión revisada
 
-Se utiliza un proyecto de **carga directa** de Cloudflare Pages. Un push a main o un pull request ejecuta comprobaciones sin publicar. El flujo **Publicar versión revisada** se ejecuta manualmente sobre main y exige marcar la revisión de contenidos.
+GitHub, Settings > Pages > Source: **GitHub Actions**. En Actions > **Publicar versión revisada** > Run workflow, seleccionar main y marcar reviewed tras revisar todo el contenido. El flujo instala dependencias, comprueba, compila y publica únicamente dist. Usa el token temporal de GitHub Actions; no requiere tokens personales ni otro servicio.
 
-Configurar en GitHub, Settings > Secrets and variables > Actions:
+Un push o pull request ejecuta verificaciones, sin publicar. La publicación es manual para revisar nuevas evidencias.
 
-- Secret `CLOUDFLARE_API_TOKEN`: token de la cuenta con Cloudflare Pages: Edit.
-- Secret `CLOUDFLARE_ACCOUNT_ID`: identificador de esa cuenta.
-- Variable `CF_PAGES_PROJECT`: nombre neutral del proyecto de carga directa.
+## Privacidad
 
-No escribir estos valores en archivos, commits o chats. No activar analíticas, Zaraz, integración Git ni vistas previas automáticas en Cloudflare. El flujo comprueba que el proyecto no esté conectado a una integración Git antes de publicar.
+- Sin analíticas, publicidad, formularios, cuentas de visitantes, geolocalización ni acceso a cámara o micrófono.
+- Logos y fuentes locales; sin recursos externos automáticos. Los enlaces externos se abren con `noreferrer` solo al elegirlos.
+- CSP y `no-referrer` mediante metaetiquetas. `_headers` se usa en la vista previa local y solo es efectivo en alojamientos compatibles; GitHub Pages no permite personalizar todas las cabeceras HTTP.
+- Sin nombres del alumnado, contactos privados, direcciones, coordenadas ni registros originales de la Colectiva.
+- Fotografías institucionales de La Uni seleccionadas para este sitio y recodificadas sin EXIF/XMP/GPS. El botón + ahorra espacio; **no controla el acceso**. Las imágenes del repositorio y sus URL son públicas.
+- Guías PDF con ambos logos y autoría institucional. Idioma y lista de revisión permanecen en el navegador.
 
-También se puede subir el ZIP compilado directamente desde el panel de Cloudflare Pages. Las instrucciones vigentes del proveedor están en [Cloudflare Direct Upload](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/).
+La autoría profesional y la cuenta de GitHub son públicas por decisión de su titular. Los proveedores pueden procesar IP y datos de conexión para entregar y proteger el servicio. Esta configuración no garantiza anonimato absoluto ni elimina información publicada previamente en otros sitios.
 
-## Evidencias
+## Añadir evidencias
 
-No hay carga pública de archivos ni formulario de contacto. Los originales se conservan fuera del repositorio. Preparar copias revisadas, sin rostros, voces, datos de contacto, coordenadas, fondos reconocibles ni metadatos personales. No enlazar una carpeta completa de originales desde esta edición.
+Conservar los originales fuera del repositorio. Preparar copias sin rostros o voces de la Colectiva, contactos, coordenadas, fondos reconocibles ni metadatos personales. No enlazar carpetas de originales.
 
-1. Guardar la copia revisada en `public/evidence/` con un nombre neutral. Imágenes WebP sin EXIF/XMP o PDF revisado, máximo 25 MiB por archivo.
-2. Añadir una entrada a `public/data/catalogo.json`, conservando `version: 1` y `items` como lista:
+1. Guardar la copia revisada en `public/evidence/`, con nombre neutral. Se admiten WebP sin EXIF/XMP y PDF revisados; máximo 25 MiB por archivo.
+2. Añadir un elemento a `items` en `public/data/catalogo.json`:
 
 ```json
 {
   "id": "actividad-01",
   "title": {"es": "Registro del taller", "en": "Workshop record"},
-  "body": {"es": "Descripción general sin datos identificables.", "en": "General description without identifying information."},
+  "body": {"es": "Descripción general sin datos sensibles.", "en": "General description without sensitive information."},
   "category": "talleres",
   "file": "/evidence/actividad-01.webp",
   "mime": "image/webp",
@@ -48,15 +53,11 @@ No hay carga pública de archivos ni formulario de contacto. Los originales se c
 }
 ```
 
-3. Ejecutar build, abrir la vista previa y revisar ambos idiomas y los archivos. La marca de revisión requiere comprobar realmente el contenido; el programa no reconoce todos los rostros o localizaciones.
-4. Publicar manualmente solo tras esa revisión.
+3. Revisar ambos idiomas, abrir los archivos y ejecutar build. La marca de revisión exige comprobar realmente el contenido; los controles automáticos no reconocen todas las personas o localizaciones.
+4. Publicar manualmente tras la revisión.
 
-## Privacidad y límites
+## Derechos y fuentes
 
-Recursos locales, fuentes con sus licencias, ausencia de analíticas y conexiones externas automáticas, política de referencia `no-referrer`, CSP restrictiva y sin mapas de código fuente. Idioma y lista de revisión se guardan únicamente en el navegador. Las guías públicas en PDF incluyen los dos logos y autoría institucional.
+Las marcas La Uni y FeME pertenecen a sus titulares. No se concede una licencia general de redistribución de marcas o fotografías. Las fuentes conservan sus licencias OFL en `public/assets/fonts`. Los ejemplos técnicos son educativos y requieren adaptación y validación profesional antes de una instalación.
 
-Las comprobaciones detectan archivos no permitidos, ciertos metadatos y conexiones remotas, pero no garantizan anonimato. Los proveedores pueden procesar IP y registros técnicos. Mantener el repositorio privado no elimina asociaciones institucionales ya públicas ni registros previos.
-
-## Derechos
-
-Las marcas La Uni y FeME pertenecen a sus titulares. No se concede una licencia general de redistribución de marcas o fotografías. Las fuentes conservan sus licencias OFL en `public/assets/fonts`. Los ejemplos técnicos son educativos y requieren adaptación y validación profesional antes de cualquier instalación.
+[GitHub Pages con flujos personalizados](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) · [Vite en GitHub Pages](https://vite.dev/guide/static-deploy.html#github-pages)
