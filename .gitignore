@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+.wrangler/
+*.log
+*.pem
+*.key
+.DS_Store
+tmp/
